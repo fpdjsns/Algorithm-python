@@ -1,9 +1,9 @@
-/**
- * problem : https://leetcode.com/problems/unique-paths/
- * time complexity : O(nm)
- * space complexity : O(n)
- * algorithm : DP
- */
+#
+# problem : https://leetcode.com/problems/unique-paths/
+# time complexity : O(nm)
+# space complexity : O(n)
+# algorithm : DP
+#
  
 class Solution:
     def uniquePaths(self, m: int, n: int) -> int:
