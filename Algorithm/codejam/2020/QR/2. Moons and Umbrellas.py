@@ -24,11 +24,9 @@ for tc in range(1, t + 1):
         dp[C][0] = 0
     for i in range(1, N):
         now = S[i]
-        if now != 'C': 
-            dp[J][i] = min(dp[J][i], dp[C][i - 1] + X)  # CJ
-            dp[J][i] = min(dp[J][i], dp[J][i - 1])  # JJ
+        if now != 'C':  # CJ
+            dp[J][i] = min(dp[J][i - 1], dp[C][i - 1] + X)  # JJ, CJ
         if now != 'J':
-            dp[C][i] = min(dp[C][i], dp[J][i - 1] + Y)  # JC
-            dp[C][i] = min(dp[C][i], dp[C][i - 1])  # CC
+            dp[C][i] = min(dp[C][i - 1], dp[J][i - 1] + Y)  # CC, JC
 
     print("Case #{}: {}".format(tc, min(dp[C][N - 1], dp[J][N - 1])))
