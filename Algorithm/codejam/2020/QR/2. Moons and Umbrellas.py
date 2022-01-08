@@ -24,7 +24,7 @@ for tc in range(1, t + 1):
         dp[C][0] = 0
     for i in range(1, N):
         now = S[i]
-        if now != 'C':  # CJ
+        if now != 'C': 
             dp[J][i] = min(dp[J][i - 1], dp[C][i - 1] + X)  # JJ, CJ
         if now != 'J':
             dp[C][i] = min(dp[C][i - 1], dp[J][i - 1] + Y)  # CC, JC
