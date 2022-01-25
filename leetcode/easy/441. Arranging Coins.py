@@ -1,6 +1,6 @@
 # problem : https://leetcode.com/problems/arranging-coins/
 # algorithm : BST
-# time complexity : O(NlogN)
+# time complexity : O(logN)
 
 class Solution:
     def arrangeCoins(self, n: int) -> int:
